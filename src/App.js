@@ -4,7 +4,6 @@ import { Admin, Resource, ListGuesser } from 'react-admin';
 import {
   FirebaseAuthProvider,
   FirebaseDataProvider,
-  FirebaseRealTimeSaga
 } from 'react-admin-firebase';
 
 const {
