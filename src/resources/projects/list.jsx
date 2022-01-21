@@ -9,16 +9,30 @@ const ListActions = (props) => {
     </TopToolbar>)
 };
 
+const PostPanel = () => (
+    <div style={{display:'flex', justifyItems: 'space-between', maxWidth:'100%'}}>
+        <div style={{width:'33%'}}>
+            <p>URL</p>
+            <UrlField style={{ wordBreak:'break-all', textOverflow:'ellipsis'}} source="url" />
+        </div>
+        <div style={{width:'33%'}}>
+            <p>Url GitHub</p>
+            <UrlField style={{ wordBreak:'break-all', textOverflow:'ellipsis'}} source="gitUrl" />
+        </div>
+        <div style={{width:'33%'}}>
+            <p>Url Img</p>
+            <UrlField style={{ wordBreak:'break-all', textOverflow:'ellipsis'}} source="imgUrl" />
+        </div>
+    </div>
+);
+
 
 const list = (props) => {
     return (
         <List {...props} title="List of projects" actions={<ListActions/>}>
-           <Datagrid>
+           <Datagrid expand={<PostPanel />} rowClick="edit">
                 <TextField source="title" />
                 <TextField source="description" />
-                <UrlField source="url" />
-                <UrlField source="gitUrl" />
-                <UrlField source="imgUrl" />
            </Datagrid>
         </List>
     )
