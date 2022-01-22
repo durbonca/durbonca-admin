@@ -1,5 +1,5 @@
 import React from 'react';
-import { Create, SimpleForm, AutocompleteArrayInput, ArrayInput, TextInput, required, ReferenceArrayInput, SimpleFormIterator } from 'react-admin';
+import { Create, SimpleForm, AutocompleteArrayInput, TextInput, required, ReferenceArrayInput } from 'react-admin';
 
 const create = (props) => (
     <Create {...props}>
